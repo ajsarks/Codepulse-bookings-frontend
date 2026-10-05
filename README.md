@@ -1,70 +1,139 @@
-# Getting Started with Create React App
+# CodePulse Bookings
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based booking and scheduling web application built for CodePulse. The application provides a clean interface for managing booking workflows and communicates with a separate backend REST API.
 
-## Available Scripts
+## Live Demo
 
-In the project directory, you can run:
+**Frontend:** https://frontend-chi-swart-59.vercel.app
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Interactive booking and scheduling interface
+- Calendar and date selection
+- Client-side routing with React Router
+- REST API integration using Axios
+- Responsive web interface
+- Production frontend deployment through Vercel
+- Separate frontend and backend architecture
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tech Stack
 
-### `npm test`
+### Frontend
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- React
+- JavaScript
+- React Router
+- Axios
+- React Multi Date Picker
+- Font Awesome
+- React Icons
+- CSS
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- **Frontend:** Vercel
+- **Backend API:** Render
 
-### `npm run build` fails to minify
+## Architecture
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The application uses a separated frontend/backend architecture.
+
+```text
+User
+  |
+  v
+React Frontend
+  |
+  | HTTP / REST API requests
+  v
+Backend API
+  |
+  v
+Application Data
+```
+
+The React frontend handles the user interface, navigation, booking interactions, and date selection. Axios is used to communicate with the backend API.
+
+## Getting Started
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- Node.js
+- npm
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/ajsarks/codepulse-bookings-frontend.git
+cd codepulse-bookings-frontend
+```
+
+Install the dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm start
+```
+
+The application will be available at:
+
+```text
+http://localhost:3000
+```
+
+## Available Scripts
+
+### `npm start`
+
+Runs the application in development mode.
+
+### `npm test`
+
+Starts the test runner in interactive watch mode.
+
+### `npm run build`
+
+Creates an optimized production build in the `build` directory.
+
+## Project Structure
+
+```text
+codepulse-bookings-frontend/
+├── public/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   └── ...
+├── package.json
+├── package-lock.json
+└── README.md
+```
+
+## API Integration
+
+The frontend communicates with the CodePulse backend through HTTP requests using Axios.
+
+For local development, API requests are proxied to the deployed backend server.
+
+## Deployment
+
+The frontend is deployed using Vercel.
+
+Production builds can be generated with:
+
+```bash
+npm run build
+```
+
+## Purpose
+
+CodePulse Bookings was developed to provide a web-based interface for organizing and managing booking workflows while keeping the frontend and backend services independently deployable and maintainable.
